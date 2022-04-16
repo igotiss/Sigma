@@ -55,7 +55,6 @@
                                    value="woman"
                                    id="woman"
                                    v-model="sex"
-
                             >
                             <label class="form-check-label"
                                    for="woman">
@@ -68,7 +67,6 @@
                                    name="sex"
                                    value="noSex"
                                    v-model="sex"
-
                             >
                             <label class="form-check-label"
                                    for="woman" >
@@ -130,16 +128,11 @@
         data() {
             return{
                 firstName: '',
-                nameMessage: '',
-                nameStatus: '',
                 secondName: "",
                 phoneNumber: "",
                 sex: "noSex",
                 nickName: "",
                 activeBackground: 'white',
-                formControlValid: "form-control is-valid",
-                formControlInvalid: "form-control is-invalid",
-                formControlEmpty: "form-control",
                 messageRequired: "Це поле є обов'язковим до заповнення",
                 messageCheckFilling: "Перевірте чи правильно ви заповнили поле",
                 messageNotNumber: "Поле має містити тільки цифри"

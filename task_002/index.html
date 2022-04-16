@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://unpkg.com/vue@3"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Task 02</title>
+    <style>
+        .done { text-decoration: line-through; }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <form @submit.prevent="addTodo">
+            <input v-model="newTodo"/>
+            <button>Додати Todo</button>
+        </form>
+        <ul>
+            <li :key="todo.id" v-for="todo in filteredTodos">
+                <input type="checkbox" v-model="todo.done">
+                <span :class="{ done: todo.done }">{{ todo.text }}</span>
+                <button @click="removeTodo(todo)">X</button>
+            </li>
+        </ul>
+        <button @click="hideCompleted = !hideCompleted">
+            {{ hideCompleted ? 'Показати всі' : 'Сховати виконані' }}
+        </button>
+    </div>
+    <script src="vue.js"></script>
+</body>
+</html>

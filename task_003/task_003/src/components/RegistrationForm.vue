@@ -224,16 +224,8 @@
                 } else {
                     return 'LightCyan'
                 }
-
-
-
-
-               // console.log(this.backgroundColor)
-
             }
         }
-
-
     }
 
 </script>
